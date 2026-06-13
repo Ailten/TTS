@@ -10,8 +10,7 @@ voice = loadVoice('Axo')
 
 phonetic_sylabs = sentenceToSylab(
     sanitizeSentence(
-        #'bonjour, comment ca va ?'
-        'et on fait tourner les serviettes'
+        'bonjour, comment ca va ?'
     )
 )
 
