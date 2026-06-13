@@ -1,7 +1,7 @@
 
 sylabs = {
-    "a","e","i","o","u",
-    "ai","au","eu",
+    "a","i","o","u", #"e",
+    "ai","eu", #"au",
     "ou","oi",
     "on","an","in",
 
@@ -14,13 +14,14 @@ sylabs = {
     #"ill",
 
     #"ph",
-    "qu",
+    #"qu",
 
     #"ui",
     #"y",
 
     #"oin",
-    "ion"
+    #"ion"
+
 }
 
 import re
