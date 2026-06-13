@@ -26,14 +26,20 @@ def replacePhonetic(sentence: str) -> str:
     Replace some phonetic sylab to other more generic.
     """
 
-    sentence = re.sub(r'([dstx])\b', '', sentence)
+    sentence = re.sub(r'\b(les)\b', r'lai', sentence)  # words.
+    sentence = re.sub(r'\b(est|es)\b', r'ai', sentence)
+
+    #sentence = re.sub(r'([dstx])\b', '', sentence)
     sentence = re.sub(r'(tion)', 'sion', sentence)
-    sentence = re.sub(r'(é|è|ez|ais|ait|est)', 'ai', sentence)
+    sentence = re.sub(r'(é|è|ez|ais|ait)', 'ai', sentence)
+    sentence = re.sub(r'(e)[un]', 'ai', sentence)
+    sentence = re.sub(r'(en)', 'an', sentence)
 
     sentence = re.sub(r'(ph)', 'f', sentence)  # ordered.
+    sentence = re.sub(r'(sh)', 'ch', sentence)
     sentence = re.sub(r'(qu)', 'k', sentence)
     sentence = re.sub(r'(eau)', 'au', sentence)
-    sentence = re.sub(r'(oing)', 'oin', sentence)
+    sentence = re.sub(r'(oin|oing)', 'ouin', sentence)
     sentence = re.sub(r'(œu|oeu)', 'eu', sentence)
     sentence = re.sub(r'(ain|ein|im|aim|ym)', 'in', sentence)
     sentence = re.sub(r'(en|am|em)', 'an', sentence)
@@ -43,8 +49,18 @@ def replacePhonetic(sentence: str) -> str:
     sentence = re.sub(r'g(?=[aou])', 'g', sentence)
     sentence = re.sub(r'g(?=[eéiiy])', 'j', sentence)
     sentence = re.sub(r'ge([aou])', r'j\1', sentence)
-    sentence = re.sub(r'(?<=[aeiouy])s(?=[aeiouy])', 'z', sentence)
+    #sentence = re.sub(r'(?<=[aeiouy])s(?=[aeiouy])', 'z', sentence)
     sentence = re.sub(r'\b(x)', 'gz', sentence)
     sentence = re.sub(r'(x)', 'ks', sentence)
     sentence = re.sub(r'(y)', 'i', sentence)
     sentence = re.sub(r'(.)\1+', r'\1', sentence)
+
+
+
+    return sentence
+
+
+
+
+
+

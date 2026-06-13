@@ -10,16 +10,16 @@ sylabs = {
     "p","r","s","t","v","z",
 
     "ch",
-    "gn",
-    "ill",
+    #"gn",
+    #"ill",
 
-    "ph",
+    #"ph",
     "qu",
 
-    "ui",
-    "y",
+    #"ui",
+    #"y",
 
-    "oin",
+    #"oin",
     "ion"
 }
 

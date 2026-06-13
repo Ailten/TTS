@@ -1,14 +1,18 @@
 
+# need :
+# pip install soundfile sounddevice
 
 # DEMO.
 
-from TTS.sylab import sentenceToSylab
-from TTS.sanitize import sanitizeSentence
+from TTS import *
 
-print(
-    sentenceToSylab(
-        sanitizeSentence(
-            'bonjour, ceci est un test !'
-        )
+voice = loadVoice('Axo')
+
+phonetic_sylabs = sentenceToSylab(
+    sanitizeSentence(
+        #'bonjour, comment ca va ?'
+        'et on fait tourner les serviettes'
     )
 )
+
+playManyAudio(phonetic_sylabs, voice)
