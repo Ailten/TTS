@@ -61,8 +61,6 @@ def replacePhonetic(sentence: str) -> str:
     sentence = re.sub(r'(y)', 'i', sentence)
     sentence = re.sub(r'(.)\1+', r'\1', sentence)
 
-
-
     return sentence
 
 

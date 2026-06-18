@@ -6,7 +6,7 @@
 
 from TTS import *
 
-voice = loadVoice('Axo')
+voice = loadVoice('Cylia')
 
 phonetic_sylabs = sentenceToSylab(
     sanitizeSentence(
